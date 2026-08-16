@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>087 BURGUER - Artesanal, Forte e Intenso</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="087 BURGUER - Hamburgueria artesanal com sabor intenso e ambiente urbano. Peça agora!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Oswald para Títulos (Condensado, Industrial), Inter para textos, Caveat para textos curtos manuscritos -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/checkout.css">
+</head>
+<body>
+
+    <!-- Overlay do Fundo -->
+    <div class="grunge-overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="#inicio"><img src="./imagens/logo.png.png" alt="087 BURGUER" class="site-logo"></a>
+            </div>
+            <nav class="nav-links">
+                <a href="#inicio" class="active">INÍCIO</a>
+                <a href="#destaques">DESTAQUES</a>
+                <a href="#cardapio">CARDÁPIO</a>
+                <a href="#sobre">SOBRE NÓS</a>
+            </nav>
+            <button class="btn btn-primary btn-order" id="open-cart-btn">
+                PEÇA AGORA <i class="ph ph-shopping-bag"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="script-text text-orange">Sabor marcante, artesanal. <i class="ph-fill ph-sparkle"></i></span>
+                <h1>
+                    <span style="display: inline-flex; align-items: center; gap: 15px;">
+                        087 BURGUER 
+                        <img src="./imagens/logo.png.png" alt="Logo 087 Burguer" style="height: 1.2em; width: auto; object-fit: contain;">
+                    </span>
+                    <br><span class="text-orange">FEITO NA HORA, <br>FEITO PRA VOCÊ!</span>
+                </h1>
+                <p>Refeições deliciosas feitas com ingredientes de qualidade, muito queijo e chapa quente de verdade.</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('cardapio').scrollIntoView()">PEDIR AGORA <i class="ph ph-arrow-right"></i></button>
+                    <button class="btn btn-outline" onclick="document.getElementById('cardapio').scrollIntoView()">VER CARDÁPIO</button>
+                </div>
+
+                <div class="customers-review">
+                    <div class="avatars">
+                        <!-- Espaço para avatars (referência) -->
+                        <div class="avatar" style="background-color: var(--color-brown);"></div>
+                        <div class="avatar" style="background-color: var(--color-orange);"></div>
+                        <div class="avatar" style="background-color: var(--color-red);"></div>
+                    </div>
+                    <div class="review-text">
+                        <span>Junte-se a 35.000+ Clientes Felizes</span>
+                        <div class="stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="burger-showcase">
+                    <img src="./imagens/lanches/salada.png.png" alt="Hambúrguer Artesanal" class="hero-burger-img">
+                    <div class="quality-badge">
+                        <span class="badge-text">FRESCO</span>
+                        <span class="badge-percent text-orange">100%</span>
+                        <span class="badge-text">QUALIDADE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Faixa de Features Branca -->
+        <div class="features-strip">
+            <div class="container features-container">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="ph ph-moped"></i></div>
+                    <span>Entrega Rápida</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="ph ph-leaf"></i></div>
+                    <span>Ingredientes Frescos</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="ph ph-fire"></i></div>
+                    <span>Sabor Intenso</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="ph ph-tag"></i></div>
+                    <span>Melhor Preço</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="ph ph-smiley"></i></div>
+                    <span>Satisfação Garantida</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destaques Section -->
+    <section id="destaques" class="highlights-section">
+        <div class="container highlights-container">
+            <!-- Top Part -->
+            <div class="highlight-row">
+                <div class="highlight-img-col">
+                    <div class="highlight-img-wrapper">
+                        <img src="" id="highlight-main-img" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%; opacity: 1; transition: opacity 0.3s ease;">
+                    </div>
+                </div>
+                <div class="highlight-text-col">
+                    <h2 class="section-title text-left text-orange">CAMPEÕES DE VENDAS</h2>
+                    <h3 id="burger-highlight-title">SALADA</h3>
+                    <p id="burger-highlight-desc">Pão brioche macio com nosso blend bovino suculento, cheddar derretido. Alface, tomate e cebola trazem frescor, finalizados com maionese especial cremosa. Equilíbrio perfeito entre intensidade e leveza em cada mordida.</p>
+                    
+                    <div class="highlight-thumbnails" id="highlight-thumbnails">
+                        <div class="thumbnail active" data-index="0" data-id="1" data-title="SALADA" data-desc="Pão brioche macio com nosso blend bovino suculento, cheddar derretido. Alface, tomate e cebola trazem frescor, finalizados com maionese especial cremosa. Equilíbrio perfeito entre intensidade e leveza em cada mordida.">
+                            <img src="./imagens/lanches/salada.png.png" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                        </div>
+                        <div class="thumbnail" data-index="1" data-id="2" data-title="SERRA BURGUER" data-desc="Pão brioche macio com nosso blend bovino suculento e vinagrete especial trazendo frescor. Farofa crocante de bacon e maionese de churrasco envolvem tudo com sabor intenso e defumado. Uma experiência única, marcante e simplesmente deliciosa.">
+                            <img src="./imagens/lanches/serra burguer.png.png" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                        </div>
+                        <div class="thumbnail" data-index="2" data-id="3" data-title="CREMOSO BURGUER" data-desc="Pão brioche macio com nosso blend bovino suculento e creme de queijo especial bem cremoso. Vinagrete da casa trazendo frescor e bacon em cubos crocantes pra fechar com intensidade. Uma explosão de sabores cremosos e irresistíveis em cada mordida.">
+                            <img src="./imagens/lanches/cremoso burguer.png.png" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-4" id="btn-order-highlight">PEDIR ESTE HAMBÚRGUER</button>
+                </div>
+            </div>
+            
+            <!-- Bottom Part: Combos -->
+            <div class="highlight-row">
+                <div class="highlight-text-col">
+                    <h2 class="section-title text-left text-orange">COMBOS ESPECIAIS</h2>
+                    <h3 id="combo-highlight-title">COMBO PERNIL</h3>
+                    <p id="combo-highlight-desc">Combo reforçado e cheio de sabor. Burger de pernil suculento, acompanhado de fritas tradicional crocantes. Pra completar, Refri lata bem gelado.</p>
+                    
+                    <div class="highlight-thumbnails" id="combo-thumbnails">
+                        <div class="thumbnail active" data-index="0" data-id="11" data-title="COMBO PERNIL" data-desc="Combo reforçado e cheio de sabor. Burger de pernil suculento, acompanhado de fritas tradicional crocantes. Pra completar, Refri lata bem gelado.">
+                            <img src="./imagens/combos/combo pernil.png.png" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                        </div>
+                        <div class="thumbnail" data-index="1" data-id="12" data-title="COMBO NORDESTINO" data-desc="Combo com sabor raiz e personalidade. Burguer Nordestino suculento, acompanhado de fritas tradicional crocantes. Pra completar, Refri lata bem gelado.">
+                            <img src="./imagens/combos/combo nordestino.png.png" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                        </div>
+                        <div class="thumbnail" data-index="2" data-id="13" data-title="COMBO CLÁSSICO" data-desc="Combo perfeito pra quem ama o básico bem feito. Burguer Clássico suculento, acompanhado de fritas tradicional crocantes. Pra fechar, Coca lata bem gelada.">
+                            <img src="./imagens/combos/combo classico.png.png" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-4" id="btn-order-combo">PEDIR ESTE COMBO</button>
+                </div>
+                <div class="highlight-img-col">
+                    <div class="highlight-img-wrapper" style="cursor: pointer;">
+                        <img src="" id="combo-main-img" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%; opacity: 1; transition: opacity 0.3s ease;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="cardapio" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">NOSSO CARDÁPIO</h2>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="burgers">Burgers</button>
+                <button class="category-btn" data-category="combos">Combos</button>
+                <button class="category-btn" data-category="sides">Acompanhamentos</button>
+                <button class="category-btn" data-category="drinks">Bebidas</button>
+            </div>
+
+            <!-- Grid de Produtos -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- Os produtos serão injetados via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre e Contato Section -->
+    <section id="sobre" class="about-section">
+        <div class="container about-content">
+            <div class="about-info">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">SOBRE A 087 BURGUER</h2>
+                <p>Hambúrgueres artesanais feitos com paixão, chapa quente e ingredientes selecionados para proporcionar uma experiência marcante.</p>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="ph-fill ph-map-pin"></i>
+                        <div>
+                            <strong>Endereço</strong>
+                            <p>R. Manoel Pereira Lins, 823 - São Cristovao<br>Serra Talhada - PE, 56903-340</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="ph-fill ph-clock"></i>
+                        <div>
+                            <strong>Horário de Funcionamento</strong>
+                            <p>Aberto todos os dias a partir das 18:00</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="ph-fill ph-phone"></i>
+                        <div>
+                            <strong>Contato</strong>
+                            <p>(87) 99644-4580</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-reviews">
+                <div class="rating-box">
+                    <div class="rating-number">4,6</div>
+                    <div class="rating-stars">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i>
+                    </div>
+                    <span>Baseado em avaliações do Google</span>
+                </div>
+                <div class="review-quote">
+                    "Simplesmente o melhor do nordeste...."
+                </div>
+            </div>
+        </div>
+        
+        <div class="container about-map">
+            <iframe 
+                src="https://maps.google.com/maps?q=R.+Manoel+Pereira+Lins,+823+-+São+Cristovao,+Serra+Talhada+-+PE&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="350" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 087 BURGUER. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Sidebar Carrinho -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Pedido</h3>
+            <button class="close-cart" id="close-cart-btn"><i class="ph ph-x"></i></button>
+        </div>
+        
+        <div class="cart-items" id="cart-items">
+            <!-- Itens do carrinho aparecerão aqui -->
+            <div class="empty-cart-msg">Seu carrinho está vazio.</div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-totals">
+                <div class="total-line">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">R$ 0,00</span>
+                </div>
+                <div class="total-line grand-total">
+                    <span>Total</span>
+                    <span id="cart-total">R$ 0,00</span>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkout-btn">FINALIZAR PEDIDO</button>
+        </div>
+    </aside>
+
+    <!-- Modal de Adicionais -->
+    <div class="modal-overlay" id="addon-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal-btn"><i class="ph ph-x"></i></button>
+            <div id="modal-product-details">
+                <!-- Preenchido via JS -->
+            </div>
+            
+            <div class="modal-options">
+                <h4>Ponto da Carne</h4>
+                <div class="radio-group">
+                    <label><input type="radio" name="meat-point" value="Mal Passado"> Mal Passado</label>
+                    <label><input type="radio" name="meat-point" value="Ao Ponto" checked> Ao Ponto</label>
+                    <label><input type="radio" name="meat-point" value="Bem Passado"> Bem Passado</label>
+                </div>
+                
+                <h4>Adicionais</h4>
+                <div class="qty-group" id="addons-list">
+                    <div class="addon-item qty-item">
+                        <div class="addon-info">
+                            <span class="addon-name">Bacon</span>
+                            <span class="addon-price">+ R$ 4,90</span>
+                        </div>
+                        <div class="qty-control">
+                            <button type="button" class="qty-btn minus" onclick="updateQty('qty-bacon', -1)">-</button>
+                            <input type="number" id="qty-bacon" class="qty-input addon-qty" value="0" min="0" max="6" data-name="Bacon" data-price="4.90" readonly>
+                            <button type="button" class="qty-btn plus" onclick="updateQty('qty-bacon', 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="addon-item qty-item">
+                        <div class="addon-info">
+                            <span class="addon-name">Carne Extra</span>
+                            <span class="addon-price">+ R$ 9,90</span>
+                        </div>
+                        <div class="qty-control">
+                            <button type="button" class="qty-btn minus" onclick="updateQty('qty-carne', -1)">-</button>
+                            <input type="number" id="qty-carne" class="qty-input addon-qty" value="0" min="0" max="6" data-name="Carne Extra" data-price="9.90" readonly>
+                            <button type="button" class="qty-btn plus" onclick="updateQty('qty-carne', 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="addon-item qty-item">
+                        <div class="addon-info">
+                            <span class="addon-name">Ovo</span>
+                            <span class="addon-price">+ R$ 4,90</span>
+                        </div>
+                        <div class="qty-control">
+                            <button type="button" class="qty-btn minus" onclick="updateQty('qty-ovo', -1)">-</button>
+                            <input type="number" id="qty-ovo" class="qty-input addon-qty" value="0" min="0" max="6" data-name="Ovo" data-price="4.90" readonly>
+                            <button type="button" class="qty-btn plus" onclick="updateQty('qty-ovo', 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="addon-item qty-item">
+                        <div class="addon-info">
+                            <span class="addon-name">Queijo Cheddar Fatia</span>
+                            <span class="addon-price">+ R$ 2,90</span>
+                        </div>
+                        <div class="qty-control">
+                            <button type="button" class="qty-btn minus" onclick="updateQty('qty-queijo', -1)">-</button>
+                            <input type="number" id="qty-queijo" class="qty-input addon-qty" value="0" min="0" max="6" data-name="Queijo Cheddar Fatia" data-price="2.90" readonly>
+                            <button type="button" class="qty-btn plus" onclick="updateQty('qty-queijo', 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4>Observações</h4>
+                <textarea id="order-notes" placeholder="Tirar cebola, sem molho..."></textarea>
+            </div>
+            
+            <button class="btn btn-primary btn-block mt-4" id="confirm-addon-btn">Adicionar R$ <span id="modal-total-price">0,00</span></button>
+        </div>
+    </div>
+
+    <!-- Modal de Checkout -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-checkout-btn"><i class="ph ph-x"></i></button>
+            <h3 style="color: var(--color-orange); font-size: 1.8rem; font-family: var(--font-heading); margin-bottom: 20px;">DADOS DE ENTREGA</h3>
+            
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" id="customer-name" required placeholder="Seu nome">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group" style="flex: 2;">
+                        <label>Rua</label>
+                        <input type="text" id="customer-street" required placeholder="Nome da rua">
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label>Número</label>
+                        <input type="text" id="customer-number" required placeholder="Nº">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Bairro</label>
+                        <input type="text" id="customer-neighborhood" required placeholder="Seu bairro">
+                    </div>
+                    <div class="form-group">
+                        <label>Complemento</label>
+                        <input type="text" id="customer-complement" placeholder="Apto, Bloco (opcional)">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Forma de Pagamento</label>
+                    <select id="payment-method" required>
+                        <option value="PIX">PIX</option>
+                        <option value="Cartão de Crédito">Cartão de Crédito</option>
+                        <option value="Cartão de Débito">Cartão de Débito</option>
+                        <option value="Dinheiro">Dinheiro</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block mt-4">ENVIAR PEDIDO <i class="ph ph-whatsapp-logo"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
